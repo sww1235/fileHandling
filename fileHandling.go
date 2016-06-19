@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+//CreateFileHandle creates a file handle with logging of errors
 func CreateFileHandle(path string) *os.File {
 	f, err := os.Open("")
 	if err != nil {
@@ -14,6 +15,7 @@ func CreateFileHandle(path string) *os.File {
 	return f
 }
 
+//CloseFileHandle closes a file handle with logging
 func CloseFileHandle(f *os.File) {
 	log.Printf("Closing file %s", f.Name())
 	f.Close()
